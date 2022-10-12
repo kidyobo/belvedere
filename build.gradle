@@ -13,7 +13,7 @@ ext {
     materialVersion = "1.2.0"
     gridLayoutVersion = "1.0.0"
     picassoVersion = "2.8"
-    versionName = "3.0.6-SNAPSHOT"
+    versionName = "3.0.7"
 
     buildSettings = [
             localBuild : true,
@@ -32,7 +32,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.ext.kotlinVersion}"
+        classpath "com.android.tools.build:gradle:3.4.2"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }

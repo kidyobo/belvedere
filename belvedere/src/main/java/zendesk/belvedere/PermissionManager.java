@@ -137,7 +137,7 @@ class PermissionManager {
             if (Build.VERSION.SDK_INT >= VERSION_CODES.TIRAMISU) {
                 Collections.addAll(permissions, TIRAMISU_PERMISSIONS);
             } else {
-                permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+//                permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
             }
         }
         return permissions;
@@ -148,7 +148,8 @@ class PermissionManager {
         final boolean hasReadPermission =
                 (Build.VERSION.SDK_INT >= VERSION_CODES.TIRAMISU)
                         ? isPermissionGranted(context, TIRAMISU_PERMISSIONS)
-                        : isPermissionGranted(context, Manifest.permission.READ_EXTERNAL_STORAGE);
+//                        : isPermissionGranted(context, Manifest.permission.READ_EXTERNAL_STORAGE);
+                        :true;
 
         return isBelowKitkat || hasReadPermission;
     }
